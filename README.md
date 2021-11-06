@@ -11,8 +11,12 @@
 ```
 Точки входа в приложения:
 %ip или hostname сервера% / - JBPM (см. известные проблемы)
+
 %ip или hostname сервера% /business-central - консоль администрирования JBPM
+
 %ip или hostname сервера% /grafana - Grafana 
+Логин пароль admin:admin
+Посмотреть на dashboard, подгружаемый при деплое можно тут: /grafana/d/-2b06CKnz/
 %ip или hostname сервера% /prometheus - Prometheus
 ```
 *%ip или hostname сервера% в моём случае был 192.168.0.4, так как был получен от DHCP сервера моего маршрутизатора.*
