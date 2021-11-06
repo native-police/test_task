@@ -39,7 +39,7 @@
  {"outcome" => "success"} 
  Running jBPM Server Full on JBoss Wildfly... 
 ```
-
+3. Порт 8080 остаётся открытым. 
 
 
 Конфигурация, использованная при создании/запуске:
