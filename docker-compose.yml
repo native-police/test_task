@@ -44,6 +44,7 @@ services:
         POSTGRES_DB: jbpm
         POSTGRES_USER: jbpm
         POSTGRES_PASSWORD: jbpm
+#Порт специально оставляю открытым, чтобы можно было подключиться к БД и увидеть, что JBPM создал нужную БД и установил подключение.
       ports:
       - 5432:5432
   prometheus:
