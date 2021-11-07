@@ -18,7 +18,7 @@ services:
   jbpm:
       image: jboss/jbpm-server-full:latest
       container_name: jbpm
-      network_mode: host
+#      network_mode: host
       environment:
         JBPM_DB_DRIVER: postgres
         JBPM_DB_HOST: postgres
@@ -28,9 +28,13 @@ services:
 #Скорее всего нужно поиграться с портами тут, чтобы всё заработало
 #      expose:
 #       - 5432
-#      ports:
-#      - 8080:8080
-#      - 8001:8001
+      ports:
+      - 8123:8080
+      - 9123:9990
+      command:
+        - '-b 0.0.0.0'
+        - '-bmanagement 0.0.0.0'
+        - '-Djboss.management.http.port=8124'
   postgres:
       image: postgres
       container_name: postgres
