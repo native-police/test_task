@@ -22,28 +22,8 @@
 
 Известные проблемы:
 1. После логина в консоль администрирования JBPM выводится пустое окно, хотя ошибок в логах, влияющих на загрузку приложения не наблюдается.
-
-2. Не удается проверить, действительно ли JBPM установил связь с Postgres, так как не удается получить доступ к БД через pgAdmin, но в логах JBPM выводится следующее:
- ```
- Using Database settings: 
- Driver: postgres 
- Host: postgres 
- Port: 5432 
- Name: jbpm 
- User: jbpm 
- Updating driver config for database: postgres 
- "PostgreSQL module exists" 
- {"outcome" => "success"} 
- {"outcome" => "success"} 
- {"outcome" => "success"} 
- {"outcome" => "success"} 
- {"outcome" => "success"} 
- {"outcome" => "success"} 
- {"outcome" => "success"} 
- Running jBPM Server Full on JBoss Wildfly... 
-```
-3. Порт 8080 остаётся открытым. 
-4. Для доступа в Prometheus нужно в адресной строке обязательно ввести / в конце. Иначе выдаёт ошибку 404.
+2. Порт 8080 остаётся открытым. 
+3. Для доступа в Prometheus нужно в адресной строке обязательно ввести / в конце. Иначе выдаёт ошибку 404.
 
 Конфигурация, использованная при создании/запуске:
 ```
