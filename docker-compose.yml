@@ -22,7 +22,7 @@ services:
       environment:
         JBPM_DB_DRIVER: postgres
         JBPM_DB_HOST: postgres
-        JBPM_DB_POST: 5432
+        JBPM_DB_PORT: 5432
       depends_on:
           - "postgres"
 #Скорее всего нужно поиграться с портами тут, чтобы всё заработало
@@ -31,10 +31,10 @@ services:
       ports:
       - 8123:8080
       - 9123:9990
-      command:
-        - '-b 0.0.0.0'
-        - '-bmanagement 0.0.0.0'
-        - '-Djboss.management.http.port=8124'
+#      environment:
+#         b 0.0.0.0
+#         bmanagement 0.0.0.0
+#         Djboss.management.http.port=8124
   postgres:
       image: postgres
       container_name: postgres
@@ -44,6 +44,8 @@ services:
         POSTGRES_DB: jbpm
         POSTGRES_USER: jbpm
         POSTGRES_PASSWORD: jbpm
+      ports:
+      - 5432:5432
   prometheus:
     image: prom/prometheus
     container_name: prometheus
