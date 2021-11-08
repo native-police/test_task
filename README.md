@@ -19,7 +19,7 @@
 Логин пароль admin:admin
 Посмотреть на dashboard, подгружаемый при деплое, можно тут: /grafana/d/-2b06CKnz/
 
-%ip или hostname сервера% /prometheus/ - Prometheus (см. проблема №3)
+%ip или hostname сервера% /prometheus - Prometheus
 статус таргета можно посмотреть тут: /prometheus/targets
 ```
 *%ip или hostname сервера% в моём случае был 192.168.0.4, так как был получен от DHCP сервера моего маршрутизатора.*
