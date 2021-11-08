@@ -14,7 +14,8 @@ services:
     - /path/to/vhost.d:/etc/nginx/vhost.d:ro
     ports:
       - 80:80
-
+    depends_on:
+      - "jbpm"
   jbpm:
       image: jboss/jbpm-server-full:latest
       container_name: jbpm
@@ -25,14 +26,19 @@ services:
         JBPM_DB_PORT: 5432
       depends_on:
           - "postgres"
+      volumes:
+        - type: bind
+          source: ./start_jbpm-wb.sh
+          target: /start_jbpm-wb.sh
+
 #Скорее всего нужно поиграться с портами тут, чтобы всё заработало
 #      expose:
 #       - 5432
-      ports:
-      - 8123:8080
-      - 9123:9990
-#      environment:
-#         b 0.0.0.0
+#      ports:
+#      - 8123:80
+#      - 9123:80
+#      command:
+#        - '-Djava.security.egd=file:/dev/urandom'
 #         bmanagement 0.0.0.0
 #         Djboss.management.http.port=8124
   postgres:
