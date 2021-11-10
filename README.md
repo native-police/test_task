@@ -17,7 +17,6 @@
 
 %ip или hostname сервера% /grafana - Grafana 
 Логин пароль admin:admin
-Посмотреть на dashboard, подгружаемый при деплое, можно тут: /grafana/d/-2b06CKnz/
 
 %ip или hostname сервера% /prometheus - Prometheus
 статус таргета можно посмотреть тут: /prometheus/targets
