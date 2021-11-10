@@ -10,9 +10,9 @@
 %ip или hostname сервера% / - WildFly Placeholder 
 
 %ip или hostname сервера% /business-central - консоль администрирования JBPM 
-
+Логин пароль wbadmin:wbadmin
 %ip или hostname сервера% /jbpm-casemgmt - консоль администрирования JBPM-Case Management
-
+Логин пароль wbadmin:wbadmin
 %ip или hostname сервера% /kie-server/docs/#/ - Документация по REST API Kie Server
 
 %ip или hostname сервера% /grafana - Grafana 
